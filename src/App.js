@@ -1,9 +1,9 @@
-import { TodoCounter } from './TodoCounter';
-import { TodoSearch } from './TodoSearch';
-import { TodoList } from './TodoList';
-import { TodoItem } from './TodoItem';
-import { CreateTodoButton } from './CreateTodoButton';
-import './App.css';
+import { TodoCounter } from '../src/TodoCounter/TodoCounter';
+import { TodoSearch } from '../src/TodoSearch/TodoSearch';
+import { TodoList } from '../src/TodoList/TodoList';
+import { TodoItem } from '../src/TodoItem/TodoItem';
+import { CreateTodoButton } from '../src/CreateButton/CreateTodoButton';
+
 
 const defaultTodos = [
   {text:'Cortar cebolla', completed: true},
@@ -20,7 +20,11 @@ function App() {
 
       <TodoList>
         {defaultTodos.map(todo => (
-          <TodoItem />
+          <TodoItem 
+            key={todo.text} 
+            text={todo.text}
+            complete={todo.completed}
+          />
         ))}
       </TodoList>
 
