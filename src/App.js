@@ -23,7 +23,7 @@ function App() {
           <TodoItem 
             key={todo.text} 
             text={todo.text}
-            complete={todo.completed}
+            completed={todo.completed}
           />
         ))}
       </TodoList>
